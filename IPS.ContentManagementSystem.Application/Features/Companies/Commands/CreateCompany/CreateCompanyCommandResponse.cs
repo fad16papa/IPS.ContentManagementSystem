@@ -1,7 +1,7 @@
-﻿using IPS.ContentManagementSystem.Application.Response;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using IPS.ContentManagementSystem.Application.Response;
 
 namespace IPS.ContentManagementSystem.Application.Features.Companies.Commands.CreateCompany
 {
@@ -11,6 +11,6 @@ namespace IPS.ContentManagementSystem.Application.Features.Companies.Commands.Cr
         {
         }
 
-        public CreateCompanyDto createCompanyDto { get; set; }
+        public CreateCompanyDto CreateCompanyDto { get; set; }
     }
 }

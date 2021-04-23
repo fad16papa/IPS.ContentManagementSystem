@@ -1,12 +1,12 @@
-﻿using AutoMapper;
-using IPS.ContentManagementSystem.Application.Contracts.Persistence;
-using IPS.ContentManagementSystem.Domain.Entities;
-using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
+using IPS.ContentManagementSystem.Application.Contracts.Persistence;
+using IPS.ContentManagementSystem.Domain.Entities;
+using MediatR;
 
 namespace IPS.ContentManagementSystem.Application.Features.Companies.Commands.CreateCompany
 {
@@ -28,7 +28,7 @@ namespace IPS.ContentManagementSystem.Application.Features.Companies.Commands.Cr
             var validator = new CreateCompanyCompanyValidator();
             var validationResult = await validator.ValidateAsync(request);
 
-            if(validationResult.Errors.Count > 0)
+            if (validationResult.Errors.Count > 0)
             {
                 createCompanyCommandResponse.Success = false;
                 createCompanyCommandResponse.ValidationErrors = new List<string>();
@@ -38,7 +38,7 @@ namespace IPS.ContentManagementSystem.Application.Features.Companies.Commands.Cr
                 }
             }
 
-            if(createCompanyCommandResponse.Success)
+            if (createCompanyCommandResponse.Success)
             {
                 var company = new Company()
                 {
@@ -48,7 +48,7 @@ namespace IPS.ContentManagementSystem.Application.Features.Companies.Commands.Cr
                     IsEnable = request.IsEnable
                 };
                 company = await _companyRepository.AddAsync(company);
-                createCompanyCommandResponse.createCompanyDto = _mapper.Map<CreateCompanyDto>(company);
+                createCompanyCommandResponse.CreateCompanyDto = _mapper.Map<CreateCompanyDto>(company);
             }
 
             return createCompanyCommandResponse;
