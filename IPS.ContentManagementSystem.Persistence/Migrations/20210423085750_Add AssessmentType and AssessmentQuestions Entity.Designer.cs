@@ -4,14 +4,16 @@ using IPS.ContentManagementSystem.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IPS.ContentManagementSystem.Persistence.Migrations
 {
     [DbContext(typeof(IPSContentManagementDbContext))]
-    partial class IPSContentManagementDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210423085750_Add AssessmentType and AssessmentQuestions Entity")]
+    partial class AddAssessmentTypeandAssessmentQuestionsEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
