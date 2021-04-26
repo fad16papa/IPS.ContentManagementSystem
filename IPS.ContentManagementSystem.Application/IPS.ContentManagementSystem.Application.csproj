@@ -17,8 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\AssessmentQuestions\Commands\" />
-    <Folder Include="Features\AssessmentQuestions\Queries\" />
+    <Folder Include="Features\AssessmentQuestion\Commands\" />
   </ItemGroup>
 
 </Project>
