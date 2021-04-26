@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IPS.ContentManagementSystem.Persistence.Repositories
 {
-    public class CompanyRepository : BaseRepsitory<Company>, ICompanyRepository
+    public class CompanyRepository : BaseRepository<Company>, ICompanyRepository
     {
         public CompanyRepository(IPSContentManagementDbContext iPSContentManagementDbContext) : base(iPSContentManagementDbContext)
         {

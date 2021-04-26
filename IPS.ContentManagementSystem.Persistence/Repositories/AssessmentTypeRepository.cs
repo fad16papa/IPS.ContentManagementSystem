@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IPS.ContentManagementSystem.Persistence.Repositories
 {
-    public class AssessmentTypeRepository : BaseRepsitory<AssessmentType>, IAssessmentTypeRepository
+    public class AssessmentTypeRepository : BaseRepository<AssessmentType>, IAssessmentTypeRepository
     {
         public AssessmentTypeRepository(IPSContentManagementDbContext iPSContentManagementDbContext) : base(iPSContentManagementDbContext)
         {

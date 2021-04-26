@@ -18,12 +18,13 @@ namespace IPS.ContentManagementSystem.Persistence
                 options.UseSqlServer(configuration.GetConnectionString("IPSContentManagementSystemsConnectionString"));
             });
 
-            services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepsitory<>));
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
 
             services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddScoped<IPositionRepository, PositionRepository>();
             services.AddScoped<ICompanyRepository, CompanyRepository>();
             services.AddScoped<IAssessmentTypeRepository, AssessmentTypeRepository>();
+            services.AddScoped<IAssessmentQuestionRepository, AssessmentQustionsRepository>();
 
             return services;
         }

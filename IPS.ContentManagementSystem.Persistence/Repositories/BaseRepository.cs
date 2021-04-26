@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace IPS.ContentManagementSystem.Persistence.Repositories
 {
-    public class BaseRepsitory<T> : IAsyncRepository<T> where T : class
+    public class BaseRepository<T> : IAsyncRepository<T> where T : class
     {
         public readonly IPSContentManagementDbContext _iPSContentManagementDbContext;
 
-        public BaseRepsitory(IPSContentManagementDbContext iPSContentManagementDbContext)
+        public BaseRepository(IPSContentManagementDbContext iPSContentManagementDbContext)
         {
             _iPSContentManagementDbContext = iPSContentManagementDbContext;
         }
