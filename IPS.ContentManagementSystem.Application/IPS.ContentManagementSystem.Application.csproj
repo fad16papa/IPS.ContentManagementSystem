@@ -16,8 +16,4 @@
     <ProjectReference Include="..\IPS.ContentManagementSystem.Domain\IPS.ContentManagementSystem.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\AssessmentQuestion\Commands\" />
-  </ItemGroup>
-
 </Project>
